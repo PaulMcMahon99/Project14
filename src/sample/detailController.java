@@ -1,12 +1,22 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class detailController {
 
     @FXML
     private ComboBox comboBoxDetail;
+
+    @FXML
+    private Label labelDetail;
+
+    @FXML
+    private ImageView imgViewDetail;
 
     @FXML
     private void initialize(){
@@ -18,5 +28,15 @@ public class detailController {
                 "Tiree", "Valley", "Waddington", "Whitby", "Wick Airport", "Yeovilton");
 
     }
-// tests
+
+    public void selectCombo(ActionEvent select) {
+//            labelDetail.setText(comboBoxDetail.getAccessibleText());
+
+        Image image = new Image("sample/img/Aberporth.png");
+        imgViewDetail.setImage(image);
+
+
+    }
+
+
 }
