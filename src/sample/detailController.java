@@ -3,17 +3,18 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+//import javafx.scene.control.Label;
 
 public class detailController {
 
     @FXML
     private ComboBox comboBoxDetail;
 
-    @FXML
-    private Label labelDetail;
+//    @FXML
+//    private Label labelDetail;
 
     @FXML
     private ImageView imgViewDetail;
@@ -25,7 +26,7 @@ public class detailController {
 //    This initial method populates the combobox with values.
 
         comboBoxDetail.getItems().setAll("Aberporth", "Armagh", "Ballypatrick Forest", "Bradford", "Braemar", "Camborne",
-                "Cambridge", "Cambridge NIAB", "Cardiff Bute Park", "Chivenor", "Cwmystwyth", "Dunstaffnage", "Durham", "Eastbourne",
+                "Cambridge NIAB", "Cardiff Bute Park", "Chievnor", "Cwmystwyth", "Dunstaffnage", "Durham", "Eastbourne",
                 "Eskdalemuir", "Heathrow", "Hurn", "Lerwick", "Leuchars", "Lowestoft", "Manston", "Nairn", "Newton Rigg", "Oxford",
                 "Paisley", "Ringway", "Ross-on-Wye", "Shawbury", "Sheffield", "Southampton", "Stornoway Airport", "Sutton Bonington",
                 "Tiree", "Valley", "Waddington", "Whitby", "Wick Airport", "Yeovilton");
@@ -34,7 +35,8 @@ public class detailController {
 
     public void selectCombo(ActionEvent select) {
 
-//        this label is meant to display the name of the selection, but refuses to work
+//        this label below is meant to display the name of the selection, but unfortunately refuses to work
+
 //        labelDetail.setText(comboBoxDetail.getValue());
 
 

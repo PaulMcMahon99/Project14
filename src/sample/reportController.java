@@ -1,6 +1,9 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.print.PageLayout;
+import javafx.print.Printer;
+import javafx.print.PrinterJob;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -13,23 +16,45 @@ public class reportController {
     private ComboBox comboBoxReport;
 
     @FXML
-    private ImageView imageViewReport;
+    private ImageView imgViewReport;
+
+    @FXML
+    private Printer printer;
+
+    @FXML
+    private PrinterJob printerJob;
+
+    @FXML
+    private PageLayout pageLayout;
+
 
     @FXML
     private void initialize(){
 
         comboBoxReport.getItems().setAll("Aberporth", "Armagh", "Ballypatrick Forest", "Bradford", "Braemar", "Camborne",
-                "Cambridge", "Cambridge NIAB", "Cardiff Bute Park", "Chivenor", "Cwmystwyth", "Dunstaffnage", "Durham", "Eastbourne",
+                "Cambridge NIAB", "Cardiff Bute Park", "Chievnor", "Cwmystwyth", "Dunstaffnage", "Durham", "Eastbourne",
                 "Eskdalemuir", "Heathrow", "Hurn", "Lerwick", "Leuchars", "Lowestoft", "Manston", "Nairn", "Newton Rigg", "Oxford",
                 "Paisley", "Ringway", "Ross-on-Wye", "Shawbury", "Sheffield", "Southampton", "Stornoway Airport", "Sutton Bonington",
                 "Tiree", "Valley", "Waddington", "Whitby", "Wick Airport", "Yeovilton");
     }
 
+    //For an unknown reason tabReport.fxml will not accept #selectReport in "onAction".  This is stopping this working.
     public void selectReport(ActionEvent select) {
 
-        Image image = new Image("sample/img/" + comboBoxReport.getValue() + ".png");
-        imageViewReport.setImage(image);
+        Image report = new Image("sample/img/" + comboBoxReport.getValue() + ".png");
+        imgViewReport.setImage(report);
+
+        Printer printer = Printer.getDefaultPrinter();
+        PrinterJob printerJob = PrinterJob.createPrinterJob(printer);
+        PageLayout pageLayout = printerJob.getJobSettings().getPageLayout();
+
+        printerJob.getJobSettings().setPageLayout(pageLayout);
+        printerJob.endJob();
     }
-
-
 }
+
+
+
+
+
+
