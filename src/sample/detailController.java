@@ -22,6 +22,8 @@ public class detailController {
     @FXML
     private void initialize(){
 
+//    This initial method populates the combobox with values.
+
         comboBoxDetail.getItems().setAll("Aberporth", "Armagh", "Ballypatrick Forest", "Bradford", "Braemar", "Camborne",
                 "Cambridge", "Cambridge NIAB", "Cardiff Bute Park", "Chivenor", "Cwmystwyth", "Dunstaffnage", "Durham", "Eastbourne",
                 "Eskdalemuir", "Heathrow", "Hurn", "Lerwick", "Leuchars", "Lowestoft", "Manston", "Nairn", "Newton Rigg", "Oxford",
@@ -32,8 +34,11 @@ public class detailController {
 
     public void selectCombo(ActionEvent select) {
 
+//        this label is meant to display the name of the selection, but refuses to work
 //        labelDetail.setText(comboBoxDetail.getValue());
 
+
+//        this object call brings the image data file into the ImageView pane.
         Image image = new Image("sample/img/" + comboBoxDetail.getValue() + ".png");
         imgViewDetail.setImage(image);
 
