@@ -12,7 +12,7 @@ public class overviewController {
 
     @FXML
     private void initialize(){
-        Image image = new Image("sample/img/OverviewTest.png");
+        Image image = new Image("sample/img/Overview.png");
         imgView.setImage(image);
     }
 

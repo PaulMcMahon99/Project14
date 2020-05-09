@@ -18,6 +18,7 @@ public class detailController {
     @FXML
     private ImageView imgViewDetail;
 
+
     @FXML
     private void initialize(){
 
@@ -30,9 +31,10 @@ public class detailController {
     }
 
     public void selectCombo(ActionEvent select) {
-//            labelDetail.setText(comboBoxDetail.getAccessibleText());
 
-        Image image = new Image("sample/img/Aberporth.png");
+//        labelDetail.setText(comboBoxDetail.getValue());
+
+        Image image = new Image("sample/img/" + comboBoxDetail.getValue() + ".png");
         imgViewDetail.setImage(image);
 
 
