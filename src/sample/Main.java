@@ -8,12 +8,14 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    //    this start method sets the scene.
+    //    this start method sets the scene. There is a problem with the layout that could not be rectified.
+    //    the correct permutations of adjustments to the layout to prevent the overview screen from being partially
+    //    obscured was never resolved.  It is still functional, however.
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Weather Data");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 600, 600));
         primaryStage.show();
     }
 

@@ -10,6 +10,9 @@ import javafx.scene.image.ImageView;
 
 public class detailController {
 
+//    All of the variable declarations for the detail tab controller are made and work fine here, as does the
+//    associated methods below.  Despite being the same, the report tab's equivalent is in unknown error.
+
     @FXML
     private ComboBox comboBoxDetail;
 
@@ -44,6 +47,7 @@ public class detailController {
         Image image = new Image("sample/img/" + comboBoxDetail.getValue() + ".png");
         imgViewDetail.setImage(image);
 
+//        Bradford throws an unknown error, despite being apparently the same as the others. This was not resolved.
 
     }
 
